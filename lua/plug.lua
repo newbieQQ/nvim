@@ -38,8 +38,9 @@ require("lazy").setup({
   'mzlogin/vim-markdown-toc',
   'dkarter/bullets.vim',
 
-  -- lazygit
+  -- git
   'kdheepak/lazygit.nvim',
+  'lewis6991/gitsigns.nvim',
 
   -- which key
   'liuchengxu/vim-which-key',
