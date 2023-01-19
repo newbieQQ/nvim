@@ -1,15 +1,14 @@
-local lazypath = '~/.config/nvim/lua/lazy/lazy.lua'
-
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
     "clone",
-    "--depin=1",
-    "https://github.com/newbieQQ/lazy.nvim.git",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
     lazypath,
   })
 end
-
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
@@ -24,6 +23,9 @@ require("lazy").setup({
   'yaocccc/vim-surround',
   'gcmt/wildfire.vim',
 
+  -- easymotion
+ 'easymotion/vim-easymotion',
+
   -- 格式整理
   'junegunn/vim-easy-align',
   'scrooloose/nerdcommenter',
@@ -32,10 +34,15 @@ require("lazy").setup({
   'lilydjwg/colorizer',
 
   --markdown
-  'suan/vim-instant-markdown',
   'dhruvasagar/vim-table-mode',
   'mzlogin/vim-markdown-toc',
-  'dkarter/bullets.vim'
+  'dkarter/bullets.vim',
+
+  -- lazygit
+  'kdheepak/lazygit.nvim',
+
+  -- which key
+  'liuchengxu/vim-which-key',
 })
 
 

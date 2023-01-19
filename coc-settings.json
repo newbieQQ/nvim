@@ -1,4 +1,6 @@
 {
   "snippets.ultisnips.pythonPrompt": false,
-  "coc.preferences.extensionUpdateCheck": "daily"
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "explorer.toggle": true,
+  "explorer.icon.enableNerdfont": true
 }

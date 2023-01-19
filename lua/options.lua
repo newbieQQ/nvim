@@ -35,6 +35,7 @@ vim.g.bg            = dark
 vim.cmd([[colorscheme gruvbox]])
 
 -- 输入法自动根据模式自动切换
-vim.cmd([[
-au InsertLeave * :silent !fcitx5-remote -c
-]])
+vim.cmd([[ au InsertLeave * :silent !fcitx5-remote -c ]])
+
+-- 文件判断
+vim.cmd([[ filetype plugin on ]])

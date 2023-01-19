@@ -3,11 +3,12 @@ vim.cmd([[
       \ 'coc-clangd',
       \ 'coc-lua',
       \ 'coc-python',
+      \ 'coc-json',
       \
-      \ 'coc-explorer',
       \ 'coc-translator',
       \ 'coc-yank',
       \ 'coc-pairs',
+      \ 'coc-explorer',
       \ ]
 ]])
 
@@ -32,23 +33,4 @@ map("i", "<S-TAB>", [[ coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>" ]], opts)
 -- <C-g>u breaks current undo, please make your own choice
 map("i", "<cr>", [[ coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>" ]], opts)
 
--- Use `[g` and `]g` to navigate diagnostics
--- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
-map("n", "[g", "<Plug>(coc-diagnostic-prev)", {silent = true})
-map("n", "]g", "<Plug>(coc-diagnostic-next)", {silent = true})
-
--- GoTo code navigation
-map("n", "gd", "<Plug>(coc-definition)", {silent = true})
-map("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
-map("n", "gi", "<Plug>(coc-implementation)", {silent = true})
-map("n", "gr", "<Plug>(coc-references)", {silent = true})
-
--- Symbol renaming
-map("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true})
-
--- Formatting selected code
-map("x", "<leader>i", "<Plug>(coc-format-selected)", {silent = true})
-map("n", "<leader>i", "<Plug>(coc-format-selected)", {silent = true})
-
-map("n", "tt", ":CocCommand explorer<CR>", {silent = true})
 
