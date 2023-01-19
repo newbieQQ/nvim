@@ -16,10 +16,10 @@ map('n', '<c-s-k>', '5k',         {noremap = true})
 
 
 map('n', '<c-n>', ':nohlsearch<CR>', {noremap = true})
-map('n', '<c-j>', ':w<CR><c-w>j',    {noremap = true})
-map('n', '<c-h>', ':w<CR><c-w>h',    {noremap = true})
-map('n', '<c-k>', ':w<CR><c-w>k',    {noremap = true})
-map('n', '<c-l>', ':w<CR><c-w>l',    {noremap = true})
+map('n', '<c-j>', '<c-w>j',    {noremap = true})
+map('n', '<c-h>', '<c-w>h',    {noremap = true})
+map('n', '<c-k>', '<c-w>k',    {noremap = true})
+map('n', '<c-l>', '<c-w>l',    {noremap = true})
 map('n', '<c-c>', ':wq<CR>',         {noremap = true})
 
 

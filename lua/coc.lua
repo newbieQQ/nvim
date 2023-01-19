@@ -6,6 +6,8 @@ vim.cmd([[
       \
       \ 'coc-explorer',
       \ 'coc-translator',
+      \ 'coc-yank',
+      \ 'coc-pairs',
       \ ]
 ]])
 
@@ -47,4 +49,6 @@ map("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true})
 -- Formatting selected code
 map("x", "<leader>i", "<Plug>(coc-format-selected)", {silent = true})
 map("n", "<leader>i", "<Plug>(coc-format-selected)", {silent = true})
+
+map("n", "tt", ":CocCommand explorer<CR>", {silent = true})
 

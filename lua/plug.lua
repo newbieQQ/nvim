@@ -17,8 +17,8 @@ require("lazy").setup({
   'vim-airline/vim-airline',
   'morhetz/gruvbox',
 
+  -- lsp 补全
   {'neoclide/coc.nvim', branch = 'release'},
-  'jiangmiao/auto-pairs',
 
   -- surround 和 wildfire 配合有神奇的效果
   'yaocccc/vim-surround',
