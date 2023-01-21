@@ -1,3 +1,4 @@
+-- lazy插件自动安装插件
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -34,9 +35,6 @@ require("lazy").setup({
   'lilydjwg/colorizer',
 
   --markdown
-  'dhruvasagar/vim-table-mode',
-  'mzlogin/vim-markdown-toc',
-  'dkarter/bullets.vim',
 
   -- git
   'kdheepak/lazygit.nvim',

@@ -16,8 +16,6 @@ map('n', 'Q', ':q!<CR>',           {noremap = true})
 map('n', '?', ':set hlsearch<CR>?', {noremap = true})
 map('n', '/', ':set hlsearch<CR>/', {noremap = true})
 
-map('n', '<A-j>', '5j',            {noremap = true})
-map('n', '<A-k>', '5k',            {noremap = true})
 map('n', '<A-l>', ':tabn<CR>',     {noremap = true})
 map('n', '<A-h>', ':tabp<CR>',     {noremap = true})
 
