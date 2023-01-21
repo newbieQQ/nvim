@@ -1,15 +1,15 @@
 vim.cmd([[
       let g:coc_global_extensions = [
-      \ 'coc-clangd',              -- clangd补 
-      \ 'coc-lua',                 -- lua补全
-      \ 'coc-python',              -- python补 
-      \ 'coc-json',                -- json补全
-      \                                        
-      \ 'coc-translator',          -- 翻译插件
-      \ 'coc-yank',                -- 剪切板
-      \ 'coc-pairs',               -- 括号补全
-      \ 'coc-explorer',            -- 文件管理
-      \ 'coc-list',
+      \ 'coc-clangd',              
+      \ 'coc-lua',                 
+      \ 'coc-python',              
+      \ 'coc-json',                
+      \                            
+      \ 'coc-translator',          
+      \ 'coc-yank',                
+      \ 'coc-pairs',               
+      \ 'coc-explorer',            
+      \ 'coc-lists',
       \ ]
 ]])
 
