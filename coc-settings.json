@@ -3,5 +3,6 @@
   "explorer.icon.enableNerdfont": true,
   "explorer.toggle": true,
   "markdown-preview-enhanced.previewTheme":"github-dark.css",
-  "markdown-preview-enhanced.latexEngine": "pdflatex"
+  "markdown-preview-enhanced.latexEngine": "pdflatex",
+  "leetcode.language": "cpp"
 }
