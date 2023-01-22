@@ -1,3 +1,4 @@
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 # 从零开始打造属于自己的nvim
 ---
 ## 文件结构

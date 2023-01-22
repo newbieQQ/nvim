@@ -82,5 +82,3 @@ keyset("v", "<leader>tt", "<Plug>(coc-translator-pv)")
 -- translator-releader
 keyset("n", "<leader>tr", "<Plug>(coc-translator-r)")
 keyset("v", "<leader>tr", "<Plug>(coc-translator-rv)")
-
-

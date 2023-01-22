@@ -41,7 +41,7 @@ vim.cmd("colorscheme gruvbox")
 vim.cmd([[ au InsertLeave * :silent !fcitx5-remote -c ]])
 
 -- 文件判断
-vim.cmd([[ filetype plugin on ]])
+vim.cmd([[ filetype plugin indent on ]])
 
 -- 取消换行注释
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
@@ -54,7 +54,13 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 	end,
 })
 
+local require_markdown = function() require('Filetype.markdown') end
+local require_html     = function() require('Filetype.Html') end
 
+vim.api.nvim_create_autocmd({
+{"FileType"}, { pattern = "markdown", callback = require_markdown },
+{"FileType"}, { pattern = "html", callback = require_html }
+})
 
 
 
