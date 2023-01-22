@@ -18,13 +18,12 @@ require("lazy").setup({
   -- 主题插件
   'nvim-lualine/lualine.nvim',
   'morhetz/gruvbox',
-  'kdheepak/tabline.nvim',
 
   -- lsp 补全
   {'neoclide/coc.nvim', branch = 'release'},
 
   -- surround 和 wildfire 配合有神奇的效果
-  'yaocccc/vim-surround',
+  'tpope/vim-surround',
   'gcmt/wildfire.vim',
 
   -- easymotion
@@ -32,7 +31,7 @@ require("lazy").setup({
 
   -- 格式整理
   'junegunn/vim-easy-align',
-  'scrooloose/nerdcommenter',
+ 'preservim/nerdcommenter',
 
   --颜色识别
   'lilydjwg/colorizer',
@@ -42,7 +41,6 @@ require("lazy").setup({
   -- git
   'kdheepak/lazygit.nvim',
 })
-
 
 
 

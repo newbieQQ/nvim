@@ -40,7 +40,8 @@ map('n', '<left>',   ':vertical resize -5<CR>', {noremap = true})
 map('n', '<right>',  ':vertical resize +5<CR>', {noremap = true})
 
 -- 快速注释
-map('n', '<leader>/',  '<leader>c<space>',      {noremap = true})
+map('n', '<leader>/',  '<leader>c<spaces>',  {noremap = false})
+
 
 -- easymotion
 map('v', '<leader>f',  '<Plug>(easymotion-bd-f)',      {})

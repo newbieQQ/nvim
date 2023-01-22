@@ -72,24 +72,6 @@ keyset("o", "ic", "<Plug>(coc-classobj-i)", opts)
 keyset("x", "ac", "<Plug>(coc-classobj-a)", opts)
 keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
 
-local opts = {silent = true, nowait = true}
--- Show all diagnostics
-keyset("n", "<leader>a", ":<C-u>CocList diagnostics<cr>", opts)
--- Manage extensions
-keyset("n", "<leader>e", ":<C-u>CocList extensions<cr>", opts)
--- Show commands
-keyset("n", "<leader>c", ":<C-u>CocList commands<cr>", opts)
--- Find symbol of current document
-keyset("n", "<leader>o", ":<C-u>CocList outline<cr>", opts)
--- Search workleader symbols
-keyset("n", "<leader>s", ":<C-u>CocList -I symbols<cr>", opts)
--- Do default action for next item
-keyset("n", "<leader>j", ":<C-u>CocNext<cr>", opts)
--- Do default action for previous item
-keyset("n", "<leader>k", ":<C-u>CocPrev<cr>", opts)
--- Resume latest coc list
-keyset("n", "<leader>p", ":<C-u>CocListResume<cr>", opts)
-
 -- explorer
 keyset("n", "<c-n>", ":CocCommand explorer<CR>")
 -- translator
