@@ -4,18 +4,21 @@ if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
     "clone",
+    "--depth=1",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
     "--branch=stable", -- latest stable release
     lazypath,
   })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   -- 主题插件
-  'vim-airline/vim-airline',
+  'nvim-lualine/lualine.nvim',
   'morhetz/gruvbox',
+  'kdheepak/tabline.nvim',
 
   -- lsp 补全
   {'neoclide/coc.nvim', branch = 'release'},
@@ -38,10 +41,6 @@ require("lazy").setup({
 
   -- git
   'kdheepak/lazygit.nvim',
-  'lewis6991/gitsigns.nvim',
-
-  -- which key
-  'liuchengxu/vim-which-key',
 })
 
 
