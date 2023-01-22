@@ -1,5 +1,7 @@
 # 从零开始打造属于自己的nvim
+---
 ## 文件结构
+---
 ```
 .
 ├── coc-settings.json
@@ -17,20 +19,30 @@
 └── README.md
 ```
 ## vim-surround插件
+---
 `"Hello world"`
 1.使用 `cs”‘` 效果如下:
+
 `'Hello world'`
 2.使用 `cs'<q>` 效果如下:
+
 `<q>Hello world</q>`
 3.使用 `cst"`  效果如下:
+
 `"Hello world"`
 4.使用 `ds”` 效果如下:
+
 `Hello world`
 5.使用 `ys{$xx}"` {$xx}是一个文本对象：
+
 例如: 
+
 `Hello world` 使用 `ysiw“`效果如下：`"Hello" world`
+
 `Hello world` 使用 `ys2w“`效果如下：`"Hello world"`
+
 ## wildfire.vim插件
+---
 按下回车可以快速选择一个文本对象（段落)
 ```
 Press <ENTER> in normal mode to 
