@@ -1,4 +1,21 @@
 # 从零开始打造属于自己的nvim
+## 文件结构
+```
+.
+├── coc-settings.json
+├── init.lua
+├── lazy-lock.json
+├── lua
+│   ├── core
+│   │   ├── keymap.lua
+│   │   ├── options.lua
+│   │   └── plug.lua
+│   └── Plugin
+│       ├── coc.lua
+│       ├── lualine.lua
+│       └── nerdcommenter.lua
+└── README.md
+```
 ## vim-surround插件
 `"Hello world"`
 1.使用 `cs”‘` 效果如下:
