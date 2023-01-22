@@ -54,13 +54,13 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 	end,
 })
 
-local require_markdown = function() require('Filetype.markdown') end
-local require_html     = function() require('Filetype.Html') end
-
-vim.api.nvim_create_autocmd({
-{"FileType"}, { pattern = "markdown", callback = require_markdown },
-{"FileType"}, { pattern = "html", callback = require_html }
-})
+local require_markdown = {}
+function require_markdown()
+  require('Filetype.markdown') 
+end
+vim.api.nvim_create_autocmd(
+{"FileType"}, { pattern = "markdown", callback = require_markdown }
+)
 
 
 
