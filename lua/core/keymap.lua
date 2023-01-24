@@ -1,63 +1,63 @@
-local map = vim.api.nvim_set_keymap
+local  G,opt = require("G"), {noremap = true}
 
-map('n', '<leader>y', '"+y', {noremap = true})
-map('n', '<leader>p', '"+p', {noremap = true})
-map('n', '<leader>d', '"+d', {noremap = true})
+G.map({
+{'n', '<leader>y', '"+y', opt},
+{'n', '<leader>p', '"+p', opt},
+{'n', '<leader>d', '"+d', opt},
 
-map('v', '<leader>y', '"+y', {noremap = true})
-map('v', '<leader>p', '"+p', {noremap = true})
-map('v', '<leader>d', '"+d', {noremap = true})
+{'v', '<leader>y', '"+y', opt},
+{'v', '<leader>p', '"+p', opt},
+{'v', '<leader>d', '"+d', opt},
 
-map('n', '<leader>nh', ':nohlsearch<CR>', {noremap = true})
-map('n', '<leader>rp',':%s/',{noremap = true})
+{'n', '<leader>nh', ':nohlsearch<CR>', opt},
+{'n', '<leader>rp',':%s/',opt},
 
-map('n', 'L', '$',                 {noremap = true})
-map('n', 'H', '^',                 {noremap = true})
-map('n', '>', '>>',                {noremap = true})
-map('n', '<', '<<',                {noremap = true})
-map('n', 'Q', ':q!<CR>',           {noremap = true})
-map('n', '?', ':set hlsearch<CR>?', {noremap = true})
-map('n', '/', ':set hlsearch<CR>/', {noremap = true})
+{'v', 'L', '$',                 opt},
+{'v', 'H', '^',                 opt},
+{'n', 'L', '$',                 opt},
+{'n', 'H', '^',                 opt},
 
-map('n', '<A-l>', ':tabn<CR>',     {noremap = true})
-map('n', '<A-h>', ':tabp<CR>',     {noremap = true})
+{'n', '>', '>>',                opt},
+{'n', '<', '<<',                opt},
+{'n', 'Q', ':q!<CR>',           opt},
+{'n', '?', ':set hlsearch<CR>?', opt},
+{'n', '/', ':set hlsearch<CR>/', opt},
 
-
-map('n', '<c-j>', '<c-w>j',          {noremap = true})
-map('n', '<c-h>', '<c-w>h',          {noremap = true})
-map('n', '<c-k>', '<c-w>k',          {noremap = true})
-map('n', '<c-l>', '<c-w>l',          {noremap = true})
-map('n', '<c-c>', ':wq<CR>',         {noremap = true})
+{'n', '<A-l>', ':tabn<CR>',     opt},
+{'n', '<A-h>', ':tabp<CR>',     opt},
 
 
-map('n', '<leader><leader>y', 'ggyG', {noremap = true})
-map('n', '<leader><leader>p', 'ggpG', {noremap = true})
-map('n', '<leader><leader>v', 'ggVG', {noremap = true})
-
-map('n', '<up>',     ':res -5<CR>',             {noremap = true})
-map('n', '<down>',   ':res +5<CR>',             {noremap = true})
-map('n', '<left>',   ':vertical resize -5<CR>', {noremap = true})
-map('n', '<right>',  ':vertical resize +5<CR>', {noremap = true})
-
--- 快速注释
-map('n', '<leader>/',  '<leader>c<spaces>',  {noremap = false})
+{'n', '<c-j>', '<c-w>j',          opt},
+{'n', '<c-h>', '<c-w>h',          opt},
+{'n', '<c-k>', '<c-w>k',          opt},
+{'n', '<c-l>', '<c-w>l',          opt},
+{'n', '<c-c>', ':wq<CR>',         opt},
 
 
--- easymotion
-map('v', '<leader>f',  '<Plug>(easymotion-bd-f)',      {})
-map('n', '<leader>f',  '<Plug>(easymotion-overwin-f)', {})
-map('n', 's',          '<Plug>(easymotion-overwin-f2)',{})
+{'n', '<leader><leader>y', 'ggyG', opt},
+{'n', '<leader><leader>p', 'ggpG', opt},
+{'n', '<leader><leader>v', 'ggVG', opt},
+
+{'n', '<up>',     ':res -5<CR>',             opt},
+{'n', '<down>',   ':res +5<CR>',             opt},
+{'n', '<left>',   ':vertical resize -5<CR>', opt},
+{'n', '<right>',  ':vertical resize +5<CR>', opt},
+
 
 -- lazygit
-map('n', '<leader>g',  ':w<CR>:LazyGit<CR>',           {})
-
+{'n', '<leader>g',  ':w<CR>:LazyGit<CR>',           {}},
 
 --EasyAlign
-map("v", "ga",         ":EasyAlign<CR>",              {silent = true})
+{"v", "ga",         ":EasyAlign<CR>",              {silent = true}},
 
+})
 
-
-
+G.map({
+-- easymotion
+{'v', '<leader>f',  '<Plug>(easymotion-bd-f)',      {}},
+{'n', '<leader>f',  '<Plug>(easymotion-overwin-f)', {}},
+{'n', 's',          '<Plug>(easymotion-overwin-f2)',{}},
+})
 
 
 
