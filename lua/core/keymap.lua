@@ -1,4 +1,4 @@
-local  G,opt = require("G"), {noremap = true}
+local  G,opt = require("core.G"), {noremap = true}
 
 G.map({
 {'n', '<leader>y', '"+y', opt},
