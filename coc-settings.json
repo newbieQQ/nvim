@@ -4,5 +4,6 @@
   "explorer.toggle": true,
   "markdown-preview-enhanced.previewTheme":"github-dark.css",
   "markdown-preview-enhanced.latexEngine": "pdflatex",
-  "leetcode.language": "cpp"
+  "leetcode.language": "cpp",
+  "outline.togglePreviewKey": "<c-q>"
 }

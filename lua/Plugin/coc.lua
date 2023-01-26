@@ -1,11 +1,11 @@
 vim.g['coc_global_extensions'] = {
+  "coc-clangd",
   "coc-python",
   "coc-json",
   "coc-lua",
   "coc-markdown-preview-enhanced",
   "coc-webview",
 
-  "coc-leetcode",
   "coc-translator",
   "coc-yank",
   "coc-pairs",
