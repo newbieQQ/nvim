@@ -37,6 +37,7 @@ require("lazy").setup({
   'lilydjwg/colorizer',
 
   --markdown
+  'iamcco/markdown-preview.vim',
 
   -- git
   'kdheepak/lazygit.nvim',

@@ -4,6 +4,5 @@
   "explorer.toggle": true,
   "markdown-preview-enhanced.previewTheme":"github-dark.css",
   "markdown-preview-enhanced.latexEngine": "pdflatex",
-  "leetcode.language": "cpp",
-  "outline.togglePreviewKey": "<c-q>"
+  "markdown-preview-enhanced.chromePath": "/usr/bin/wyeb"
 }
