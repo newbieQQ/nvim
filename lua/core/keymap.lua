@@ -48,15 +48,15 @@ G.map({
 {'n', '<leader>g',  ':w<CR>:LazyGit<CR>',           {}},
 
 --EasyAlign
-{"v", "ga",         ":EasyAlign<CR>",              {silent = true}},
+{"v", "ga",         ":EasyAlign<CR>",               {}},
 
 })
 
 G.map({
 -- easymotion
-{'v', '<leader>f',  '<Plug>(easymotion-bd-f)',      {}},
-{'n', '<leader>f',  '<Plug>(easymotion-overwin-f)', {}},
-{'n', 's',          '<Plug>(easymotion-overwin-f2)',{}},
+{'v', 's',         '<Plug>(easymotion-bd-f)',      {}},
+{'n', 's',         '<Plug>(easymotion-overwin-f)', {}},
+{'n', '<leader>f', '<Plug>(easymotion-overwin-f2)',{}},
 })
 
 

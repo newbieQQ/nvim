@@ -1,17 +1,20 @@
+local G = require('G')
 local ensure_packer = function()
-  local fn = vim.fn
+  local fn = G.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
     fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
+    G.cmd [[packadd packer.nvim]]
     return true
   end
   return false
 end
 
 local packer_bootstrap = ensure_packer()
-local G = require('G')
 return require('packer').startup(function(use)
+
+  -- 防止被自己clean
+  use 'wbthomason/packer.nvim'
 
   -- 主题插件
   use 'nvim-lualine/lualine.nvim'
@@ -23,21 +26,26 @@ return require('packer').startup(function(use)
   -- surround 和 wildfire 配合有神奇的效果
   use 'tpope/vim-surround'
   use 'gcmt/wildfire.vim'
-      -- easymotion
+
+  -- easymotion
   use 'easymotion/vim-easymotion'
 
   -- 格式整理
   use 'junegunn/vim-easy-align'
-  use 'preservim/nerdcommenter'
+  use 'tpope/vim-commentary'
 
   --颜色识别
   use 'lilydjwg/colorizer'
 
   --markdown
+  use 'vimwiki/vimwiki'
   use 'iamcco/markdown-preview.nvim'
 
   -- git
   use 'kdheepak/lazygit.nvim'
+
+  -- 文件搜索
+  use {'junegunn/fzf'}
 
 end)
 
