@@ -4,20 +4,20 @@
 ## 文件结构
 ---
 ```
-.
 ├── coc-settings.json
 ├── init.lua
 ├── lua
 │   ├── core
-│   │   ├── G.lua
 │   │   ├── keymap.lua
 │   │   ├── options.lua
 │   │   └── plug.lua
 │   ├── Filetype
 │   │   ├── c.lua
 │   │   └── markdown.lua
+│   ├── G.lua
 │   └── Plugin
 │       ├── coc.lua
+│       ├── Imchange.lua
 │       └── lualine.lua
 └── README.md
 ```
@@ -60,26 +60,3 @@ select the closest text object.
 
 ## Markdow-preview
 下载后需要到插件目录下使用`npm install`或者`yarn install`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

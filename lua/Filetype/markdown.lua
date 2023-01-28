@@ -1,6 +1,6 @@
 local G = require("G")
 
-G.cmd("au VimEnter * :MarkdownPreview")
+G.cmd("au VimEnter * :MarkdownPreviewToggle")
 
 --set to 1, nvim will open the preview window after entering the markdown buffer
 --default: 0
