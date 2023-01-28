@@ -1,48 +1,45 @@
--- lazy插件自动安装插件
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--depth=1",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
 end
 
-vim.opt.rtp:prepend(lazypath)
+local packer_bootstrap = ensure_packer()
+local G = require('G')
+return require('packer').startup(function(use)
 
-require("lazy").setup({
   -- 主题插件
-  'nvim-lualine/lualine.nvim',
-  'morhetz/gruvbox',
+  use 'nvim-lualine/lualine.nvim'
+  use 'morhetz/gruvbox'
 
   -- lsp 补全
-  {'neoclide/coc.nvim', branch = 'release'},
+  use {'neoclide/coc.nvim', branch = 'release'}
 
   -- surround 和 wildfire 配合有神奇的效果
-  'tpope/vim-surround',
-  'gcmt/wildfire.vim',
-
-  -- easymotion
- 'easymotion/vim-easymotion',
+  use 'tpope/vim-surround'
+  use 'gcmt/wildfire.vim'
+      -- easymotion
+  use 'easymotion/vim-easymotion'
 
   -- 格式整理
-  'junegunn/vim-easy-align',
- 'preservim/nerdcommenter',
+  use 'junegunn/vim-easy-align'
+  use 'preservim/nerdcommenter'
 
   --颜色识别
-  'lilydjwg/colorizer',
+  use 'lilydjwg/colorizer'
 
   --markdown
-  'iamcco/markdown-preview.vim',
+  use 'iamcco/markdown-preview.nvim'
 
   -- git
-  'kdheepak/lazygit.nvim',
-})
+  use 'kdheepak/lazygit.nvim'
 
+end)
 
 
 

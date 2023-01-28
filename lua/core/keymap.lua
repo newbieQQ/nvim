@@ -1,4 +1,4 @@
-local  G,opt = require("core.G"), {noremap = true}
+local G, opt = require('G'), {noremap = true}
 
 G.map({
 {'n', '<leader>y', '"+y', opt},
@@ -10,7 +10,7 @@ G.map({
 {'v', '<leader>d', '"+d', opt},
 
 {'n', '<leader>nh', ':nohlsearch<CR>', opt},
-{'n', '<leader>rp',':%s/',opt},
+{'n', '<leader>rp', ':%s/',opt},
 
 {'v', 'L', '$',                 opt},
 {'v', 'H', '^',                 opt},
@@ -58,15 +58,6 @@ G.map({
 {'n', '<leader>f',  '<Plug>(easymotion-overwin-f)', {}},
 {'n', 's',          '<Plug>(easymotion-overwin-f2)',{}},
 })
-
-
-
-
-
-
-
-
-
 
 
 

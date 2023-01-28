@@ -5,6 +5,7 @@ G.b = vim.b
 G.o = vim.o
 G.fn = vim.fn
 G.api = vim.api
+G.opt = vim.opt
 
 function G.map(maps)
     for _,map in pairs(maps) do
@@ -32,5 +33,7 @@ end
 function G.eval(c)
     return G.api.nvim_eval(c)
 end
+
+G.g.mapleader = ' '
 
 return G

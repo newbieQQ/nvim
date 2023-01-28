@@ -7,16 +7,18 @@
 .
 ├── coc-settings.json
 ├── init.lua
-├── lazy-lock.json
 ├── lua
 │   ├── core
+│   │   ├── G.lua
 │   │   ├── keymap.lua
 │   │   ├── options.lua
 │   │   └── plug.lua
+│   ├── Filetype
+│   │   ├── c.lua
+│   │   └── markdown.lua
 │   └── Plugin
 │       ├── coc.lua
-│       ├── lualine.lua
-│       └── nerdcommenter.lua
+│       └── lualine.lua
 └── README.md
 ```
 ## vim-surround插件
@@ -56,6 +58,28 @@ select the closest text object.
 
 ![官方给的gif](https://raw.githubusercontent.com/gcmt/wildfire.vim/master/_assets/preview.gif)
 
-## nerdcommenter
-快速注释插件
-`<leader>c<space>` 切换注释状态
+## Markdow-preview
+下载后需要到插件目录下使用`npm install`或者`yarn install`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
