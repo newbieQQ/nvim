@@ -1,9 +1,10 @@
-local G = require("core.G")
-local TogglePreview = "<Plug>MarkdownPreviewToggle"
+local G = require("G")
+
+G.cmd("au VimEnter * :MarkdownPreview")
 
 --set to 1, nvim will open the preview window after entering the markdown buffer
 --default: 0
-G.g.mkdp_auto_start = 1
+G.g.mkdp_auto_start = 0
 
 --set to 1, the nvim will auto close current preview window when change
 --from markdown buffer to another buffer
@@ -81,6 +82,7 @@ G.g.mkdp_browserfunc = ''
 --      ]])
 --use a custom markdown style must be absolute path
 --like '/Users/username/markdown.css' or expand('~/markdown.css')
+
 G.g.mkdp_markdown_css = ''
 
 --use a custom highlight style must absolute path

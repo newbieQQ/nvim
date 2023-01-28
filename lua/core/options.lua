@@ -52,17 +52,12 @@ G.api.nvim_create_autocmd({ "BufEnter" }, {
 	end,
 })
 
-local require_markdown = {}
-
-function require_markdown()
-  require('Filetype.markdown')
-  G.cmd('MarkdownPreviewToggle')
-end
-
-G.api.nvim_create_autocmd(
-	{"FileType"}, {
+G.api.nvim_create_autocmd( {"FileType"}, {
     pattern = "markdown",
-    callback = require_markdown
+    callback = function() 
+      require('Filetype.markdown')
+      --G.cmd('MarkdownPreview')
+    end
   }
 )
 

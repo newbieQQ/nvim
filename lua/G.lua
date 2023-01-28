@@ -34,6 +34,10 @@ function G.eval(c)
     return G.api.nvim_eval(c)
 end
 
+function G.au(c)
+    return G.api.nvim_create_autocmd(c)
+end
+
 G.g.mapleader = ' '
 
 return G
