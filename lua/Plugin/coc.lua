@@ -1,9 +1,10 @@
-vim.g['coc_global_extensions'] = {
+local G = require('G')
+
+G.g['coc_global_extensions'] = {
   "coc-clangd",
   "coc-python",
   "coc-json",
   "coc-lua",
-  "coc-webview",
 
   "coc-translator",
   "coc-yank",
@@ -14,17 +15,17 @@ vim.g['coc_global_extensions'] = {
 
 -- Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
 -- delays and poor user experience
-vim.opt.updatetime = 300
+G.opt.updatetime = 300
 
 -- Always show the signcolumn, otherwise it would shift the text each time
 -- diagnostics appeared/became resolved
-vim.opt.signcolumn = "yes"
+G.opt.signcolumn = "yes"
 
 local keyset = vim.keymap.set
 -- Autocomplete
 function _G.check_back_leader()
-    local col = vim.fn.col('.') - 1
-    return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
+    local col = G.fn.col('.') - 1
+    return col == 0 or G.fn.getline('.'):sub(col, col):match('%s') ~= nil
 end
 
 -- Use Tab for trigger completion with characters ahead and navigate
@@ -81,3 +82,6 @@ keyset("v", "<leader>tt", "<Plug>(coc-translator-pv)")
 -- translator-releader
 keyset("n", "<leader>tr", "<Plug>(coc-translator-r)")
 keyset("v", "<leader>tr", "<Plug>(coc-translator-rv)")
+
+
+keyset("n", "<leader>ol", ":CocOutline<CR>")

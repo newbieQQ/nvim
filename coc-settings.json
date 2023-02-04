@@ -2,5 +2,8 @@
 
   "snippets.ultisnips.pythonPrompt": false,
   "explorer.icon.enableNerdfont": true,
-  "explorer.toggle": true
+  "explorer.toggle": true,
+  "outline.autoWidth": true,
+  "outline.autoPreview": true,
+  "outline.togglePreviewKey": "p"
 }
