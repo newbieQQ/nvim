@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
   -- 主题插件
   use 'nvim-lualine/lualine.nvim'
   use 'morhetz/gruvbox'
-  use 'tree-sitter/tree-sitter'
+  use 'nvim-treesitter/nvim-treesitter'
 
   -- lsp 补全
   use {'neoclide/coc.nvim', branch = 'release'}
