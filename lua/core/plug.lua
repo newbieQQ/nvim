@@ -11,6 +11,7 @@ local ensure_packer = function()
 end
 
 local packer_bootstrap = ensure_packer()
+
 return require('packer').startup(function(use)
 
   -- 防止被自己clean
@@ -19,6 +20,7 @@ return require('packer').startup(function(use)
   -- 主题插件
   use 'nvim-lualine/lualine.nvim'
   use 'morhetz/gruvbox'
+  use 'tree-sitter/tree-sitter'
 
   -- lsp 补全
   use {'neoclide/coc.nvim', branch = 'release'}
@@ -46,6 +48,7 @@ return require('packer').startup(function(use)
 
   -- 文件搜索
   use {'junegunn/fzf'}
+
 
 end)
 
