@@ -20,10 +20,11 @@ return require('packer').startup(function(use)
   -- 主题插件
   use 'nvim-lualine/lualine.nvim'
   use 'morhetz/gruvbox'
-  use 'nvim-treesitter/nvim-treesitter'
+  use 'yaocccc/nvim-hlchunk'
 
-  -- lsp 补全
+  -- lsp 补全以及语法高亮
   use {'neoclide/coc.nvim', branch = 'release'}
+  use 'nvim-treesitter/nvim-treesitter'
 
   -- surround 和 wildfire 配合有神奇的效果
   use 'tpope/vim-surround'
@@ -49,6 +50,8 @@ return require('packer').startup(function(use)
   -- 文件搜索
   use {'junegunn/fzf'}
 
+  -- vue语法高亮
+  use 'posva/vim-vue'
 
 end)
 
