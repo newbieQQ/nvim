@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/home/newbie/.local/share/nvim/site/pack/packer/start/vim-easymotion",
     url = "https://github.com/easymotion/vim-easymotion"
   },
+  ["vim-multiple-cursors"] = {
+    loaded = true,
+    path = "/home/newbie/.local/share/nvim/site/pack/packer/start/vim-multiple-cursors",
+    url = "https://github.com/terryma/vim-multiple-cursors"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/newbie/.local/share/nvim/site/pack/packer/start/vim-surround",

@@ -53,6 +53,9 @@ return require('packer').startup(function(use)
   -- vue语法高亮
   use 'posva/vim-vue'
 
+  -- 多光标
+  use 'terryma/vim-multiple-cursors'
+
 end)
 
 
