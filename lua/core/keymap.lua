@@ -42,15 +42,14 @@ G.map({
 {'n', '<down>',   ':res +5<CR>',             opt},
 {'n', '<left>',   ':vertical resize -5<CR>', opt},
 {'n', '<right>',  ':vertical resize +5<CR>', opt},
-
+})
 
 -- lazygit
+G.map({
 {'n', '<leader>g',  ':w<CR>:LazyGit<CR>',           {}},
-
---EasyAlign
-{"v", "ga",         ":EasyAlign<CR>",               {}},
-
 })
+
+
 
 G.map({
 -- easymotion
@@ -59,6 +58,11 @@ G.map({
 {'n', '<leader>f', '<Plug>(easymotion-overwin-f2)',{}},
 })
 
+
+--EasyAlign
+G.map({
+{"v", "ga",         ":EasyAlign<CR>",               {}},
+})
 
 
 

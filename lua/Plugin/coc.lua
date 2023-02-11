@@ -75,13 +75,12 @@ keyset("x", "ac", "<Plug>(coc-classobj-a)", opts)
 keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
 
 -- explorer
-keyset("n", "<c-n>", ":CocCommand explorer<CR>")
+keyset("n", "<c-e>", ":CocCommand explorer<CR>")
 -- translator
 keyset("n", "<leader>tt", "<Plug>(coc-translator-p)")
 keyset("v", "<leader>tt", "<Plug>(coc-translator-pv)")
 -- translator-releader
 keyset("n", "<leader>tr", "<Plug>(coc-translator-r)")
 keyset("v", "<leader>tr", "<Plug>(coc-translator-rv)")
-
-
 keyset("n", "<leader>ol", ":CocOutline<CR>")
+
