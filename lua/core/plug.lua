@@ -53,6 +53,8 @@ return require('packer').startup(function(use)
   -- vue开发
   use 'posva/vim-vue'
   use 'dense-analysis/ale'
+  use 'tree-sitter/tree-sitter-javascript'
+  use 'tree-sitter/tree-sitter-vue'
 
 
   -- 多光标

@@ -129,6 +129,16 @@ _G.packer_plugins = {
     path = "/home/newbie/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["tree-sitter-javascript"] = {
+    loaded = true,
+    path = "/home/newbie/.local/share/nvim/site/pack/packer/start/tree-sitter-javascript",
+    url = "https://github.com/tree-sitter/tree-sitter-javascript"
+  },
+  ["tree-sitter-vue"] = {
+    loaded = true,
+    path = "/home/newbie/.local/share/nvim/site/pack/packer/start/tree-sitter-vue",
+    url = "https://github.com/tree-sitter/tree-sitter-vue"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/home/newbie/.local/share/nvim/site/pack/packer/start/vim-commentary",

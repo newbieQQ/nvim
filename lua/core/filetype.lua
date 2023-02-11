@@ -16,3 +16,11 @@ G.api.nvim_create_autocmd( {"FileType"}, {
     end
   }
 )
+
+G.api.nvim_create_autocmd( {"FileType"}, {
+    pattern = "vue",
+    callback = function()
+      require('Filetype.vue')
+    end
+  }
+)
