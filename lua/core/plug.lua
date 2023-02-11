@@ -50,11 +50,14 @@ return require('packer').startup(function(use)
   -- 文件搜索
   use {'junegunn/fzf'}
 
-  -- vue语法高亮
+  -- vue开发
   use 'posva/vim-vue'
+  use 'dense-analysis/ale'
+
 
   -- 多光标
   use 'terryma/vim-multiple-cursors'
+
 
 end)
 
