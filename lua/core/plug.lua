@@ -31,9 +31,6 @@ return require('packer').startup(function(use)
   use 'tpope/vim-surround'
   use 'gcmt/wildfire.vim'
 
-  -- easymotion
-  use 'easymotion/vim-easymotion'
-
   -- 格式整理
   use 'junegunn/vim-easy-align'
   use 'tpope/vim-commentary'
@@ -44,16 +41,8 @@ return require('packer').startup(function(use)
   --markdown
   use 'iamcco/markdown-preview.nvim'
 
-  -- git
-  use 'kdheepak/lazygit.nvim'
-
   -- 文件搜索
   use {'junegunn/fzf'}
-
-  -- vue开发
-  use 'posva/vim-vue'
-  use 'dense-analysis/ale'
-  use 'tree-sitter/tree-sitter-javascript'
 
   -- 多光标
   use 'terryma/vim-multiple-cursors'
