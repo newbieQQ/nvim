@@ -42,7 +42,6 @@ return require('packer').startup(function(use)
   use 'lilydjwg/colorizer'
 
   --markdown
-  use 'vimwiki/vimwiki'
   use 'iamcco/markdown-preview.nvim'
 
   -- git
