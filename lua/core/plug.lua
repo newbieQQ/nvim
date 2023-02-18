@@ -5,6 +5,7 @@ local ensure_packer = function()
   if fn.empty(fn.glob(install_path)) > 0 then
     fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
     G.cmd [[packadd packer.nvim]]
+    G.cmd [[PackerSync]]
     return true
   end
   return false
@@ -54,8 +55,6 @@ return require('packer').startup(function(use)
   use 'posva/vim-vue'
   use 'dense-analysis/ale'
   use 'tree-sitter/tree-sitter-javascript'
-  use 'tree-sitter/tree-sitter-vue'
-
 
   -- 多光标
   use 'terryma/vim-multiple-cursors'
