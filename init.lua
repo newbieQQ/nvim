@@ -5,6 +5,6 @@ require('core.filetype')
 
 require('Plugin.coc')
 require('Plugin.lualine')
-require('Plugin.Imchange')
 require('Plugin.treesitter')
 require('Plugin.hlchunk')
+require('Plugin.Imchange')

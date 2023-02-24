@@ -84,3 +84,54 @@ keyset("n", "<leader>tr", "<Plug>(coc-translator-r)")
 keyset("v", "<leader>tr", "<Plug>(coc-translator-rv)")
 keyset("n", "<leader>ol", ":CocOutline<CR>")
 
+
+-- Highlight the symbol and its references on a CursorHold event(cursor is idle)
+G.api.nvim_create_augroup("CocGroup", {})
+G.api.nvim_create_autocmd("CursorHold", {
+    group = "CocGroup",
+    command = "silent call CocActionAsync('highlight')",
+    desc = "Highlight symbol under cursor on CursorHold"
+})
+
+-- Setup formatexpr specified filetype(s)
+G.api.nvim_create_autocmd("FileType", {
+    group = "CocGroup",
+    pattern = "typescript,json",
+    command = "setl formatexpr=CocAction('formatSelected')",
+    desc = "Setup formatexpr specified filetype(s)."
+})
+
+-- Update signature help on jump placeholder
+G.api.nvim_create_autocmd("User", {
+    group = "CocGroup",
+    pattern = "CocJumpPlaceholder",
+    command = "call CocActionAsync('showSignatureHelp')",
+    desc = "Update signature help on jump placeholder"
+})
+
+-- Remap <C-f> and <C-b> to scroll float windows/popups
+---@diagnostic disable-next-line: redefined-local
+local opts = {silent = true, nowait = true, expr = true}
+keyset("n", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
+keyset("n", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
+keyset("i", "<C-f>",
+       'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1)<cr>" : "<Right>"', opts)
+keyset("i", "<C-b>",
+       'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0)<cr>" : "<Left>"', opts)
+keyset("v", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
+keyset("v", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
+
+-- Add `:Format` command to format current buffer
+G.api.nvim_create_user_command("Format", "call CocAction('format')", {})
+
+-- " Add `:Fold` command to fold current buffer
+G.api.nvim_create_user_command("Fold", "call CocAction('fold', <f-args>)", {nargs = '?'})
+
+-- Add `:OR` command for organize imports of the current buffer
+G.api.nvim_create_user_command("OR", "call CocActionAsync('runCommand', 'editor.action.organizeImport')", {})
+
+-- Add (Neo)Vim's native statusline support
+-- NOTE: Please see `:h coc-status` for integrations with external plugins that
+-- provide custom statusline: lightline.vim, vim-airline
+G.opt.statusline:prepend("%{coc#status()}%{get(b:,'coc_current_function','')}")
+
